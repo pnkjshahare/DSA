@@ -29,14 +29,44 @@ Node *ArrayToLinkList(vector<int> arr)
     }
     return head;
 }
-int LengthOfLinkList(Node *head){
-    int cnt=0;
- while (head != nullptr)
+int LengthOfLinkList(Node *head)
+{
+    int cnt = 0;
+    while (head != nullptr)
     {
         head = head->next;
         cnt++;
     }
     return cnt;
+}
+Node *RemoveHead(Node *head)
+{
+    if (head == nullptr)
+        return head;
+    Node *temp = head;
+    head = head->next;
+    delete temp;
+    return head;
+}
+Node *RemoveTail(Node *head)
+{
+    Node *temp = head;
+    while (temp->next->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    delete (temp->next);
+    temp->next = nullptr;
+    return head;
+}
+Node *print(Node *head)
+{
+    Node *temp = head;
+    while (temp != nullptr)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
 }
 int main()
 {
@@ -51,9 +81,18 @@ int main()
         arr.push_back(p);
     }
     Node *head = ArrayToLinkList(arr);
-    cout <<"head of LinkList:"<< head->data << endl;
-
-    cout<<"Length of Linklist : ";
-    cout<<LengthOfLinkList(head);
+    cout << "head of LinkList:" << head->data << endl;
+    Node *head1=head;
+    // cout << "Length of Linklist : ";
+    // cout << LengthOfLinkList(head);
+    // head = RemoveHead(head);
+    cout<<"complete Linklist :";
+    print(head);
+    cout<<"\nRemove Head : ";
+    head = RemoveHead(head);
+    print(head);
+    cout<<"\nremove tail :";
+   head1=RemoveTail(head1);
+    print(head1);
     return 0;
 }
