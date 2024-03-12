@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Pankajsahare.04/OneDrive/Desktop/CODE/C++ VS/LEETCODE/LinkList",
-      "program": "c:/Users/Pankajsahare.04/OneDrive/Desktop/CODE/C++ VS/LEETCODE/LinkList/build/Debug/outDebug",
+      "cwd": "c:/Users/Pankajsahare.04/OneDrive/Desktop/CODE/C++ VS/LEETCODE/DSA-QUESTION/LinkList",
+      "program": "c:/Users/Pankajsahare.04/OneDrive/Desktop/CODE/C++ VS/LEETCODE/DSA-QUESTION/LinkList/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
