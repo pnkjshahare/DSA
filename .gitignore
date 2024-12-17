@@ -1,0 +1,7 @@
+# Exclude all binary and executable files
+*.exe
+*.out
+*.o
+*.bin
+*.class
+*.dll
