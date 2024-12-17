@@ -9,8 +9,8 @@ public:
     Node(int val)
     {
         this->data = val;
-        this->left = NULL;
-        this->right = NULL;
+        this->left = nullptr;
+        this->right = nullptr;
     }
 };
 
@@ -23,7 +23,7 @@ Node *BuildTree(Node *root)
 
     if (data == -1)
     {
-        return NULL;
+        return nullptr;
     }
     cout << "Enter the data for left of tree" << data << endl;
     root->left = BuildTree(root->left);
@@ -31,15 +31,20 @@ Node *BuildTree(Node *root)
     root->right = BuildTree(root->right);
     return root;
 }
-int maxheight(Node * root){
-    if(root==NULL) return 0;
-    int lefthand=maxheight(root->left);
-    int righthand=maxheight(root->right);
-    return 1+max(lefthand,righthand);
+int maxheight(Node *root)
+{
+    if (root == nullptr)
+    {
+        return 0;
+    }
+    int lh = maxheight(root->left);
+    int rh = maxheight(root->right);
+    return 1 + max(lh, rh);
 }
-int main(){
+int main()
+{
     // 1 2 -1 -1 3 4 5 -1 -1 -1 6 -1 -1
-    Node *root=NULL;
-    root=BuildTree(root);
-    cout<<maxheight(root);
+    Node *root = nullptr;
+    root = BuildTree(root);
+    cout << maxheight(root);
 }
